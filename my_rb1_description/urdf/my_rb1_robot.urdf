@@ -110,7 +110,7 @@
 
     <!-- Joint - base / front caster -->
     <joint name="base_link_front_caster_joint" type="fixed">
-        <origin rpy="0 0 0" xyz="-0.1 0.0 -0.15" />
+        <origin rpy="0 0 0" xyz="0.1 0.0 -0.15" />
         <child link="front_caster" />
         <parent link="base_link" />
         <joint_properties damping="1.0" friction="0.0" />
@@ -144,7 +144,7 @@
 
     <!-- Joint - base / back caster -->
     <joint name="base_link_back_caster_joint" type="fixed">
-        <origin rpy="0 0 0" xyz="0.1 0.0 -0.15" />
+        <origin rpy="0 0 0" xyz="-0.1 0.0 -0.15" />
         <child link="back_caster" />
         <parent link="base_link" />
         <joint_properties damping="1.0" friction="0.0" />
