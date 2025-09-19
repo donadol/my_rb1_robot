@@ -1,0 +1,23 @@
+[1.126s] Invoking command in '/home/user/ros2_ws/src/my_rb1_robot/my_rb1_description': PYTHONPATH=/home/user/ros2_ws/src/my_rb1_robot/build/my_rb1_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/lib/python3.10/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_rb1_description build --build-base /home/user/ros2_ws/src/my_rb1_robot/build/my_rb1_description/build install --record /home/user/ros2_ws/src/my_rb1_robot/build/my_rb1_description/install.log --single-version-externally-managed install_data
+[1.316s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.316s]   warnings.warn(msg)
+[1.428s] running egg_info
+[1.446s] writing ../build/my_rb1_description/my_rb1_description.egg-info/PKG-INFO
+[1.446s] writing dependency_links to ../build/my_rb1_description/my_rb1_description.egg-info/dependency_links.txt
+[1.447s] writing requirements to ../build/my_rb1_description/my_rb1_description.egg-info/requires.txt
+[1.447s] writing top-level names to ../build/my_rb1_description/my_rb1_description.egg-info/top_level.txt
+[1.486s] reading manifest file '../build/my_rb1_description/my_rb1_description.egg-info/SOURCES.txt'
+[1.488s] writing manifest file '../build/my_rb1_description/my_rb1_description.egg-info/SOURCES.txt'
+[1.488s] running build
+[1.488s] running build_py
+[1.488s] running install
+[1.492s] running install_lib
+[1.511s] running install_data
+[1.511s] copying urdf/my_rb1_robot.urdf -> /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/share/my_rb1_description/urdf
+[1.512s] copying launch/display.launch.py -> /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/share/my_rb1_description/launch
+[1.512s] running install_egg_info
+[1.532s] removing '/home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/lib/python3.10/site-packages/my_rb1_description-0.0.0-py3.10.egg-info' (and everything under it)
+[1.532s] Copying ../build/my_rb1_description/my_rb1_description.egg-info to /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/lib/python3.10/site-packages/my_rb1_description-0.0.0-py3.10.egg-info
+[1.533s] running install_scripts
+[1.700s] writing list of installed files to '/home/user/ros2_ws/src/my_rb1_robot/build/my_rb1_description/install.log'
+[1.741s] Invoked command in '/home/user/ros2_ws/src/my_rb1_robot/my_rb1_description' returned '0': PYTHONPATH=/home/user/ros2_ws/src/my_rb1_robot/build/my_rb1_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/lib/python3.10/site-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_rb1_description build --build-base /home/user/ros2_ws/src/my_rb1_robot/build/my_rb1_description/build install --record /home/user/ros2_ws/src/my_rb1_robot/build/my_rb1_description/install.log --single-version-externally-managed install_data

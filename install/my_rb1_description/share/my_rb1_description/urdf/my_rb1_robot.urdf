@@ -342,7 +342,7 @@
     </gazebo>
     <gazebo reference="front_laser">
         <sensor type="gpu_lidar" name="head_hokuyo_sensor">
-            <pose relative_to='lidar_frame'>0 0 0 0 0 0</pose>
+            <pose>0 0 0 0 0 0</pose>
             <always_on>1</always_on>
             <visualize>true</visualize>
             <update_rate>20</update_rate>
