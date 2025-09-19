@@ -39,7 +39,8 @@ def generate_launch_description():
     )
 
     # RViz2 Node #
-    rviz_config_file = os.path.join(package_directory, "config", "display.rviz")
+    rviz_config_file = os.path.join(package_directory, "rviz", "display.rviz")
+    print("RViz Config Loaded !")
     rviz2_node = Node(
         package='rviz2',
         executable='rviz2',
