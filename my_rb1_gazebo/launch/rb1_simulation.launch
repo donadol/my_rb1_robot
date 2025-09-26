@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <launch>
+    <include file="$(find my_rb1_ros)/launch/rotate_service.launch"/>
+
     <!-- roslaunch arguments -->
 	<arg name="world_name" default="$(find gazebo_extra_worlds)/worlds/warehouse_environment.world"/>
 
