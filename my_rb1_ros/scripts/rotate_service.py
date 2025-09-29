@@ -68,41 +68,38 @@ class RotateService:
             # Create twist message
             twist = Twist()
 
-            # Set angular velocity based on rotation direction
-            base_angular_velocity = 0.2 if target_rotation > 0 else -0.2
-
-            # Rotate the robot
-            twist.linear.x = 0.0
-            twist.angular.z = base_angular_velocity
+            # Set angular velocity based on rotation direction - increased for faster rotation
+            base_angular_velocity = 0.8 if target_rotation > 0 else -0.8  # Faster base speed for 3-5 second target
 
             # Continue rotating until target is reached
-            tolerance = 0.008  # ~0.5 degrees tolerance
-            rate = rospy.Rate(20)
+            tolerance = 0.008727  # 0.5 degrees tolerance - high precision
+            rate = rospy.Rate(50)  # Higher frequency for better control and drift reduction
 
             while not rospy.is_shutdown():
                 # Calculate current rotation from initial position
                 angle_diff = self.normalize_angle(self.current_yaw - initial_yaw)
-
                 remaining_angle = self.normalize_angle(target_rotation - angle_diff)
 
                 if abs(remaining_angle) < tolerance:
                     break
 
+                # Create twist message with adaptive speed
                 twist = Twist()
 
-                # Adaptive speed control based on remaining angle
-                if abs(remaining_angle) > 0.5:  # > ~28 degrees
+                # Adaptive speed control based on remaining angle - balanced speed and precision
+                if abs(remaining_angle) > 0.4:  # > ~23 degrees - use full speed
                     twist.angular.z = base_angular_velocity
-                elif abs(remaining_angle) > 0.1:  # > ~6 degrees
-                    twist.angular.z = base_angular_velocity * 0.5
-                elif abs(remaining_angle) > 0.02:  # > ~1 degree
+                elif abs(remaining_angle) > 0.15:  # > ~9 degrees - moderate slowdown
+                    twist.angular.z = base_angular_velocity * 0.75
+                elif abs(remaining_angle) > 0.05:  # > ~3 degrees - careful approach
+                    twist.angular.z = base_angular_velocity * 0.4
+                elif abs(remaining_angle) > 0.02:  # > ~1 degree - precision mode
                     twist.angular.z = base_angular_velocity * 0.2
-                else:  # Very close
-                    twist.angular.z = base_angular_velocity * 0.1
+                else:  # Final fine adjustment
+                    twist.angular.z = base_angular_velocity * 0.12
 
                 # Publish velocity command
                 self.cmd_vel_pub.publish(twist)
-
                 rate.sleep()
 
             # Stop the robot
