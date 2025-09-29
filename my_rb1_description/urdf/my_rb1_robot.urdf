@@ -42,20 +42,20 @@
     <!-- Gazebo friction and material properties for front_caster -->
     <gazebo reference="front_caster">
         <material>Gazebo/Gray</material>
-        <mu>0.0</mu>
-        <mu2>0.0</mu2>
-        <kp value="10000000.0" />
-        <kd value="100.0" />
+        <mu>0.01</mu>
+        <mu2>0.01</mu2>
+        <kp>10000000.0</kp>
+        <kd>1.0</kd>
         <fdir1 value="0 0 1"/>
     </gazebo>
 
     <!-- Gazebo friction and material properties for back_caster -->
     <gazebo reference="back_caster">
         <material>Gazebo/Gray</material>
-        <mu>0.0</mu>
-        <mu2>0.0</mu2>
-        <kp value="10000000.0" />
-        <kd value="100.0" />
+        <mu>0.01</mu>
+        <mu2>0.01</mu2>
+        <kp>10000000.0</kp>
+        <kd>1.0</kd>
         <fdir1 value="0 0 1"/>
     </gazebo>
 
@@ -281,7 +281,7 @@
             <commandTopic>cmd_vel</commandTopic>
             <odometryTopic>odom</odometryTopic>
             <odometryFrame>odom</odometryFrame>
-            <robotBaseFrame>base_footprint</robotBaseFrame>
+            <robotBaseFrame>base_link</robotBaseFrame>
         </plugin>
     </gazebo>
 

@@ -103,9 +103,8 @@ class RotateService:
                 rate.sleep()
 
             # Stop the robot
-            twist.linear.x = 0.0
-            twist.angular.z = 0.0
-            self.cmd_vel_pub.publish(twist)
+            stop_twist = Twist()
+            self.cmd_vel_pub.publish(stop_twist)
 
             rospy.loginfo('Service Completed')
             response.result = "Rotation completed successfully"
