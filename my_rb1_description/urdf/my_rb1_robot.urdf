@@ -42,7 +42,7 @@
     <!-- Gazebo friction and material properties for front_caster -->
     <gazebo reference="front_caster">
         <material>Gazebo/Gray</material>
-        <mu>0.01</mu>
+        <mu1>0.01</mu1>
         <mu2>0.01</mu2>
         <kp>10000000.0</kp>
         <kd>1.0</kd>
@@ -52,7 +52,7 @@
     <!-- Gazebo friction and material properties for back_caster -->
     <gazebo reference="back_caster">
         <material>Gazebo/Gray</material>
-        <mu>0.01</mu>
+        <mu1>0.01</mu1>
         <mu2>0.01</mu2>
         <kp>10000000.0</kp>
         <kd>1.0</kd>
